@@ -13,8 +13,8 @@ function(doc) {
   //
 
   if(doc.type == "daqmetadatadocuments" && doc.status == "good" 
-  && doc.metaproc0 && doc.run_name >= "mj"){
+    && doc.metaproc0 && doc.run_name >= "mj"){
 
-  emit( doc.date_uploaded, doc.run_name);
-    }
+    emit( doc['metaproc0']['date_unixtime'], doc.run_name);
+  }
 }
