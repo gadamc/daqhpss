@@ -15,6 +15,6 @@ function(doc) {
   if(doc.type == "daqmetadatadocuments" && doc.status == "good" 
     && doc.metaproc0 && doc.run_name >= "mj" && doc["_id"].indexOf("_log") == 8){
 
-    emit( doc['metaproc0']['date_unixtime'], doc.run_name);
+    emit( doc['file_lastmodified'], doc.run_name);
   }
 }

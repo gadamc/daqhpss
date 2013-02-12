@@ -15,6 +15,6 @@ function(doc) {
   if(doc.type == "daqmetadatadocuments" && doc.status == "good" 
     && doc.metaproc0 && doc.run_name >= "mj"){
 
-    emit( doc['metaproc0']['date_unixtime'], doc.run_name);
+    emit( doc['file_lastmodified'], doc.run_name);
   }
 }
