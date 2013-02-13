@@ -12,7 +12,7 @@ function(doc) {
   //start of Edw3 - Run20. 
   //
 
-  if(doc.type == "daqmetadatadocuments" && doc.status == "good"  && doc['file_lastmodified']
+  if(doc.type == "daqmetadatadocuments"   && doc['file_lastmodified']
     && doc.metaproc0 && doc.run_name >= "mj" && doc["_id"].indexOf("_log") == 8){
 
     emit( doc['file_lastmodified'], doc.run_name);
